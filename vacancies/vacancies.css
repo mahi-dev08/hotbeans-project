@@ -1,0 +1,93 @@
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: #1a1a1a;
+    padding: 14px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 70px;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    display: block;
+}
+
+.navbar a:hover {
+    background: white;
+    color: black;
+}
+
+.navbar a.active {
+    background: #ff8811;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* MAIN LAYOUT WRAPPER */
+.job-details {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* IMAGE */
+.job-image {
+    width: 100%;
+    height: 200px;
+    background: #d9d9d9;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* TAGS */
+.job-tags span {
+    display: inline-block;
+    background: #ffe8d6;
+    padding: 6px 12px;
+    border-radius: 12px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    color: #5a2a00;
+    font-size: 13px;
+}
+
+/* SECTION TITLES */
+.section-heading {
+    margin-top: 25px;
+    color: #5a2a00;
+}
+
+/* BUTTON */
+.apply-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    margin-top: 25px;
+}

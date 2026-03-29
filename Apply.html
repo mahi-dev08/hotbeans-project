@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Responsive Registration Form</title>
+		<meta name="viewport" contents="width=device-width, intitial-scale=1.0">
+		<h1 style="text-align:top;">Apply</h1>
+			<link rel="stylesheet" type="text/css" href="../Apply.css">
+	</head>
+<body>
+		<div class="container">
+			<div class="title">Registration</div>
+			<br>
+			<br>
+			<form actions="#">
+				<div class="user details">
+					<div class="input-box">
+						<span class="details">Forename</span>
+						<input type="text" placeholder="Enter your Forename" required>
+        
+					</div>
+					<br>
+					<div class="input-box">
+						<span class="details">Surname</span>
+						<input type="text" placeholder="Enter your surname" required>
+                
+					</div>
+					
+					<br>
+					<div class="input-box">
+						<span class="details">Email</span>
+						<input type="text" placeholder="Enter your Email" required>
+                    
+					</div>
+					<br>
+					<div class="input-box">
+						<span class="details">Phone Number</span>
+						<input type="text" placeholder="Enter your phone number" required>
+
+					</div>
+					<br>
+			
+
+					
+					
+				</div>
+		</style>
+</head>
+<body>
+  <form class="form-wrapper">
+    <div class="form-group">
+      <label for="cv" class="form-label">Attach your CV (PDF only)</label>
+      <input
+        type="file"
+        id="cv"
+        name="cv"
+        class="file-input"
+        accept="application/pdf"
+        required
+      />
+    </div>
+	 <div class="form-group checkbox-row">
+      <input
+        type="checkbox"
+        id="promise"
+        name="promise"
+        required
+        onchange="document.getElementById('submitBtn').disabled = !this.checked;"
+      />
+      <label for="promise">
+        I promise all information is factually correct.
+      </label>
+    </div>
+
+	<a href="thankyou.html">
+    	<button type="submit" id="submitBtn" class="submit-btn" disabled>
+      Submit Application
+    </button>
+</a>
+  </form>
+		</div>
+
+</body>
+</html>
+
+
+			
+				
+	</div>
+		</div>
+
+	</body>
+</html>
