@@ -1,86 +1,125 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="stylesheet" type="text/css" href="main.css">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trainee Stories</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">About Us</a></li>
-            <li><a href="careers/front-end.html">Careers</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
+      <ul>
+        <li class="navbar-logo">
+          <img src="images/logo.svg" alt="Hot Beans Web logo" />
+        </li>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="careers/front-end.html">Careers</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
     </nav>
-</head>
 
-<body>
-    <h1> Trainee Stories</h1>
-    <p class="page-subtitle">
-        Learn how our trainees started their careers, built new skills, and grew through hands‑on experience.
-    </p>
+    <main class="trainee-page">
+      <section class="welcome-section">
+        <h1 class="page-title">Trainee Stories</h1>
+        <p class="welcome-intro">
+          Real voices from the people building skills, confidence, and careers
+          at Hot Beans Web.
+        </p>
+      </section>
 
-    <!-- TRAINEE CARD SECTION -->
-    <div class="card-wrapper">
+      <section class="trainee-carousel">
+        <div class="card-wrapper">
+          <button
+            class="arrow left-arrow"
+            type="button"
+            aria-label="Previous story"
+          >
+            ❮
+          </button>
 
-        <div class="arrow left-arrow">❮</div>
-
-        <div class="trainee-card-container">
-
-            <div class="trainee-card active">
-                <div class="profile-icon">
-                    <img src="https://img.freepik.com/premium-photo/portrait-young-boy-professional-look_785361-73.jpg">
-                </div>
+          <div class="trainee-card-container">
+            <article class="trainee-card active">
+              <div class="profile-icon">
+                <img
+                  src="https://img.freepik.com/premium-photo/portrait-young-boy-professional-look_785361-73.jpg"
+                  alt="Adam Casper"
+                />
+              </div>
+              <p class="story-quote">
+                “I came in knowing only the basics, but every project here
+                pushed me to grow faster than I ever imagined.”
+              </p>
+              <div class="story-details">
                 <h2 class="trainee-name">Adam Casper</h2>
                 <p class="joined-date">Joined: September 2025</p>
                 <p class="role">Trainee Front-End Developer</p>
-                <p> “I came in knowing only the basics, but every project here pushed me to grow faster than I ever imagined.”
+              </div>
+            </article>
 
-
-</p>
-            </div>
-
-            <div class="trainee-card">
-                <div class="profile-icon">
-                    <img src="https://a.storyblok.com/f/191576/1200x800/215e59568f/round_profil_picture_after_.webp">
-                </div>
+            <article class="trainee-card">
+              <div class="profile-icon">
+                <img
+                  src="https://a.storyblok.com/f/191576/1200x800/215e59568f/round_profil_picture_after_.webp"
+                  alt="Shanaya Williams"
+                />
+              </div>
+              <p class="story-quote">
+                “This programme helped me discover what I’m truly good at, and
+                gave me the confidence to pursue it.”
+              </p>
+              <div class="story-details">
                 <h2 class="trainee-name">Shanaya Williams</h2>
                 <p class="joined-date">Joined: January 2026</p>
                 <p class="role">Trainee UX Designer</p>
-                <p>  “This programme helped me discover what I’m truly good at — and gave me the confidence to pursue it.</p>
-            </div>
+              </div>
+            </article>
 
-            <div class="trainee-card">
-                <div class="profile-icon">
-                    <img src="https://img.freepik.com/premium-photo/natural-real-person-portrait-closeup-woman-girl-female-outside-nature-forest_590464-226428.jpg">
-                </div>
+            <article class="trainee-card">
+              <div class="profile-icon">
+                <img
+                  src="https://img.freepik.com/premium-photo/natural-real-person-portrait-closeup-woman-girl-female-outside-nature-forest_590464-226428.jpg"
+                  alt="Ailsa Louise"
+                />
+              </div>
+              <p class="story-quote">
+                “Solving real problems with real teams made me feel like I
+                finally belonged in the tech world.”
+              </p>
+              <div class="story-details">
                 <h2 class="trainee-name">Ailsa Louise</h2>
                 <p class="joined-date">Joined: March 2026</p>
                 <p class="role">Trainee Software Engineer</p>
-                <p> “Solving real problems with real teams made me feel like I finally belonged in the tech world.”</p>
-            </div>
+              </div>
+            </article>
+          </div>
 
+          <button
+            class="arrow right-arrow"
+            type="button"
+            aria-label="Next story"
+          >
+            ❯
+          </button>
         </div>
+      </section>
+    </main>
 
-        <div class="arrow right-arrow">❯</div>
-    </div>
     <script>
-        let cards = document.querySelectorAll('.trainee-card');
-        let i = 0;
-        cards[i].classList.add('active');
+      const cards = document.querySelectorAll(".trainee-card")
+      let currentCard = 0
 
-        document.querySelector('.right-arrow').onclick = () => {
-            cards[i].classList.remove('active');
-            i = (i + 1) % cards.length;
-            cards[i].classList.add('active');
-        };
+      document.querySelector(".right-arrow").onclick = () => {
+        cards[currentCard].classList.remove("active")
+        currentCard = (currentCard + 1) % cards.length
+        cards[currentCard].classList.add("active")
+      }
 
-        document.querySelector('.left-arrow').onclick = () => {
-            cards[i].classList.remove('active');
-            i = (i - 1 + cards.length) % cards.length;
-            cards[i].classList.add('active');
-        };
+      document.querySelector(".left-arrow").onclick = () => {
+        cards[currentCard].classList.remove("active")
+        currentCard = (currentCard - 1 + cards.length) % cards.length
+        cards[currentCard].classList.add("active")
+      }
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,93 +1,147 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title> Responsive Registration Form</title>
-		<meta name="viewport" contents="width=device-width, intitial-scale=1.0">
-		<h1 style="text-align:top;">Apply</h1>
-			<link rel="stylesheet" type="text/css" href="../Apply.css">
-	</head>
-<body>
-		<div class="container">
-			<div class="title">Registration</div>
-			<br>
-			<br>
-			<form actions="#">
-				<div class="user details">
-					<div class="input-box">
-						<span class="details">Forename</span>
-						<input type="text" placeholder="Enter your Forename" required>
-        
-					</div>
-					<br>
-					<div class="input-box">
-						<span class="details">Surname</span>
-						<input type="text" placeholder="Enter your surname" required>
-                
-					</div>
-					
-					<br>
-					<div class="input-box">
-						<span class="details">Email</span>
-						<input type="text" placeholder="Enter your Email" required>
-                    
-					</div>
-					<br>
-					<div class="input-box">
-						<span class="details">Phone Number</span>
-						<input type="text" placeholder="Enter your phone number" required>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply Now</title>
+    <link rel="stylesheet" type="text/css" href="Apply.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <ul>
+        <li class="navbar-logo"><img src="images/logo.svg" alt="Hot Beans Web logo" /></li>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="careers/front-end.html">Careers</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
 
-					</div>
-					<br>
-			
+    <!-- MAIN PAGE WRAPPER -->
+    <div class="back-btn-container">
+      <button type="button" class="back-btn" onclick="goBack()" aria-label="Go back">
+        <img src="images/backbutton.svg" alt="" aria-hidden="true" />
+      </button>
 
-					
-					
-				</div>
-		</style>
-</head>
-<body>
-  <form class="form-wrapper">
-    <div class="form-group">
-      <label for="cv" class="form-label">Attach your CV (PDF only)</label>
-      <input
-        type="file"
-        id="cv"
-        name="cv"
-        class="file-input"
-        accept="application/pdf"
-        required
-      />
+      <div class="page-wrapper">
+        <h1 class="job-title">Apply Now</h1>
+
+        <p class="paragraph">
+          Ready to join our team? Fill out the form below and submit your
+          application. We'll review your details and get back to you soon.
+        </p>
+
+        <form class="apply-form" action="thankyou.html" method="GET">
+          <h2 class="section-heading">Your Information</h2>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="forename">First Name</label>
+              <input
+                type="text"
+                id="forename"
+                name="forename"
+                placeholder="Enter your first name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="surname">Last Name</label>
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                placeholder="Enter your last name"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+          </div>
+
+          <h2 class="section-heading">Application</h2>
+
+          <div class="form-group full-width">
+            <label for="position">Position</label>
+            <select id="position" name="position" required>
+              <option value="">-- Select a Position --</option>
+              <option value="ux-lead">UX Lead Designer</option>
+              <option value="ux-trainee">UX Junior Trainee</option>
+              <option value="web-accessibility">
+                Web Accessibility Designer
+              </option>
+              <option value="backend-engineer">Backend Engineer</option>
+              <option value="database-developer">Database Developer</option>
+              <option value="network-lead">Network Lead</option>
+              <option value="seo-manager">SEO Manager</option>
+              <option value="tech-seo-analyst">Technical SEO Analyst</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="cv">Upload CV (PDF)</label>
+            <input type="file" id="cv" name="cv" accept=".pdf" required />
+          </div>
+
+          <!-- Agreement -->
+          <div class="form-agreement">
+            <input
+              type="checkbox"
+              id="accuracy"
+              name="accuracy"
+              required
+              onchange="
+                document.getElementById('submitBtn').disabled = !this.checked
+              "
+            />
+            <label for="accuracy">
+              I confirm all information is accurate and complete.
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="button-row">
+            <button type="submit" id="submitBtn" class="apply-btn" disabled>
+              Submit Application
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-	 <div class="form-group checkbox-row">
-      <input
-        type="checkbox"
-        id="promise"
-        name="promise"
-        required
-        onchange="document.getElementById('submitBtn').disabled = !this.checked;"
-      />
-      <label for="promise">
-        I promise all information is factually correct.
-      </label>
-    </div>
 
-	<a href="thankyou.html">
-    	<button type="submit" id="submitBtn" class="submit-btn" disabled>
-      Submit Application
-    </button>
-</a>
-  </form>
-		</div>
+    <script>
+      function goBack() {
+        if (window.history.length > 1) {
+          window.history.back();
+          return;
+        }
 
-</body>
-</html>
-
-
-			
-				
-	</div>
-		</div>
-
-	</body>
+        window.location.href = "careers/front-end.html";
+      }
+    </script>
+  </body>
 </html>

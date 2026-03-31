@@ -1,219 +1,272 @@
 .navbar {
-    grid-area: navbar;
-    padding: 18px 36px;
-    overflow: visible;
-    background-color: #f5f5f5;
-    text-align: center;
-    border-radius: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #ff8811;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 28px;
+  grid-area: navbar;
+  padding: 18px 36px;
+  overflow: visible;
+  background-color: #f5f5f5;
+  text-align: center;
+  border-radius: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ff8811;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 28px;
 }
 
-.navbar::before {
-    content: '☕';
-    font-size: 2.3em;
-    margin-right: 8px;
-    display: flex;
-    align-items: center;
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.navbar-logo img {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: block;
 }
 
 .navbar ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    overflow: visible;
-    display: flex;
-    gap: 28px;
-    align-items: center;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: visible;
+  display: flex;
+  gap: 28px;
+  align-items: center;
 }
 
 .navbar li {
-    float: none;
+  float: none;
 }
 
 .navbar a {
-    color: #333;
-    text-decoration: none;
-    padding: 14px 26px;
-    display: block;
-    text-align: center;
-    font-weight: 500;
-    font-size: 19px;
-    transition: all 0.3s ease;
+  color: #333;
+  text-decoration: none;
+  padding: 14px 26px;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 19px;
+  transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-    background-color: #ff8811;
-    color: white;
-    border-radius: 30px;
-    width: fit-content;
+  background-color: #ff8811;
+  color: white;
+  border-radius: 30px;
+  width: fit-content;
 }
 
 .navbar a.active {
-    background-color: #ff8811;
-    color: white;
-    font-weight: bold;
-    border-radius: 30px;
+  background-color: #ff8811;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
 }
 
 /* PAGE WRAPPER */
 .page-wrapper {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background: linear-gradient(135deg, #ffffff 0%, #fff8f3 100%);
-    border: 4px solid #ff8000;
-    border-radius: 20px;
-    box-shadow: 0 12px 32px rgba(255, 136, 17, 0.15);
-    position: relative;
-    transition: all 0.3s ease;
-    overflow: hidden;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #ffffff 0%, #fff8f3 100%);
+  border: 4px solid #ff8000;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(255, 136, 17, 0.15);
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: visible;
 }
 
 /* IMAGE */
 .job-image {
-    width: 100%;
-    height: 250px;
-    background: linear-gradient(135deg, #ff8811 0%, #ff6600 100%);
-    border-radius: 15px;
-    margin-bottom: 30px;
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  margin-bottom: 5px;
 }
 
 /* JOB TITLE */
 .job-title {
-    font-size: 2.8em;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: 700;
-    border-bottom: 4px solid #ff8811;
-    display: inline-block;
-    padding-bottom: 10px;
+  font-size: 2.8em;
+  color: #ff8811;
+  margin-bottom: 15px;
+  font-weight: 700;
+  width: fit-content;
+  border-bottom: 4px solid #333;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
 /* TAG ROW */
 .tag-row {
-    display: flex;
-    gap: 12px;
-    margin: 25px 0 35px 0;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 12px;
+  margin: 10px 0 10px 0;
+  flex-wrap: wrap;
 }
 
 .tag {
-    border: 2px solid #ff8811;
-    border-radius: 20px;
-    padding: 8px 16px;
-    background: #fff5eb;
-    color: #ff8811;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  border: 2px solid #ff8811;
+  border-radius: 20px;
+  padding: 8px 16px;
+  background: #fff5eb;
+  color: #ff8811;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 /* SECTION HEADINGS */
 .section-heading {
-    font-size: 1.6em;
-    color: #333;
-    margin-top: 35px;
-    margin-bottom: 15px;
-    font-weight: 700;
-    border-left: 4px solid #ff8811;
-    padding-left: 12px;
+  font-size: 2em;
+  color: #ff8811;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  border-bottom: 4px solid #333;
+  max-width: fit-content;
 }
 
 /* LISTS */
 .list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 25px 0;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
 }
 
 .list li {
-    padding: 12px 0 12px 30px;
-    position: relative;
-    color: #555;
-    line-height: 1.5;
-    font-size: 1.0em;
+  padding: 12px 0 12px 30px;
+  position: relative;
+  color: #555;
+  line-height: 1.5;
+  font-size: 1em;
 }
 
 .list li:before {
-    content: '•';
-    align-items: flex-start;
-    left: 0;
-    color: #ff8811;
-    font-weight: bold;
-    font-size: 1.8em;
+  content: "•";
+  align-items: flex-start;
+  left: 0;
+  color: #ff8811;
+  font-weight: bold;
+  font-size: 1.8em;
 }
 
 /* PARAGRAPH */
 .paragraph {
-    color: #555;
-    line-height: 1.8;
-    font-size: 1em;
-    margin-bottom: 25px;
+  color: #555;
+  line-height: 1.8;
+  font-size: 1em;
+  margin-bottom: 25px;
 }
 
 /* BUTTON ROW */
 .button-row {
-    display: flex;
-    gap: 15px;
-    margin-top: 35px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 /* APPLY BUTTON */
 .apply-btn {
-    padding: 14px 40px;
-    border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    background: linear-gradient(135deg, #ff8811 0%, #ff6600 100%);
-    color: white;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff8811 0%, #ff6600 100%);
+  color: white;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .apply-btn:hover {
-    background: linear-gradient(135deg, #ff6600, #ff4400);
-    box-shadow: 0 6px 16px rgba(255, 136, 17, 0.3);
+  background: linear-gradient(135deg, #ff6600, #ff4400);
+  box-shadow: 0 6px 16px rgba(255, 136, 17, 0.3);
+}
+
+/* BACK BUTTON CONTAINER */
+.back-btn-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 5%;
+  left: 10%;
+  border-radius: 50%;
+  background: #ff8811;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.back-btn img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #ff6600;
+  box-shadow: 0 4px 12px rgba(255, 136, 17, 0.3);
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .page-wrapper {
-        padding: 25px;
-        margin: 20px;
-    }
+  .page-wrapper {
+    padding: 25px;
+    margin: 20px;
+  }
 
-    .job-title {
-        font-size: 2em;
-    }
+  .back-btn {
+    width: 55px;
+    height: 55px;
+    top: -27px;
+  }
 
-    .section-heading {
-        font-size: 1.3em;
-    }
+  .job-title {
+    font-size: 2em;
+  }
 
-    .navbar {
-        padding: 14px 20px;
-        gap: 15px;
-    }
+  .section-heading {
+    font-size: 1.3em;
+  }
 
-    .navbar a {
-        padding: 10px 16px;
-        font-size: 14px;
-    }
+  .navbar {
+    padding: 14px 20px;
+    gap: 15px;
+  }
 
-    .navbar::before {
-        font-size: 1.8em;
-    }
+  .navbar a {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .navbar-logo img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 }

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100">
+  <title>Hot Bean Coffee Co. Logo</title>
+  
+  <defs>
+    <style type="text/css">
+      .flame-fill { fill: #ff8811; } /* Base Orange */
+      .bean-fill { fill: #4e2a07; } /* Rich Coffee Brown (High Contrast) */
+      .accent-fill { fill: #ffad5e; } /* Bright Accent Orange (for highlight) */
+    </style>
+  </defs>
+
+  <path class="flame-fill" d="M50,5 C35,25 20,40 20,65 C20,85 33,95 50,95 C67,95 80,85 80,65 C80,40 65,25 50,5 Z" />
+
+  <ellipse class="bean-fill" cx="50" cy="68" rx="18" ry="24" transform="rotate(-15 50 68)" />
+  
+  <path class="accent-fill" d="M48,50 C45,55 45,65 48,70 L52,70 C55,65 55,55 52,50 Z" transform="rotate(-15 50 60)" />
+
+</svg>
